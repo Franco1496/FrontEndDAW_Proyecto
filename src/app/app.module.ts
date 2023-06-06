@@ -9,6 +9,8 @@ import { EditClienteComponent } from './componentes/cliente/edit-cliente/edit-cl
 import { ListarPropiedadComponent } from './componentes/propiedad/listar-propiedad/listar-propiedad.component';
 import { AddPropiedadComponent } from './componentes/propiedad/add-propiedad/add-propiedad.component';
 import { EditPropiedadComponent } from './componentes/propiedad/edit-propiedad/edit-propiedad.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { EditPropiedadComponent } from './componentes/propiedad/edit-propiedad/e
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
