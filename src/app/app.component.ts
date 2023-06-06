@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CargarScriptsService } from './servicio/cargar-scripts.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FrontEndDAW';
+
+  constructor( private _CargarScripts: CargarScriptsService){
+
+    //_CargarScripts.Carga(["crud/main"])
+  
+  }
+  
+  ngOnInit(): void {
+        
+    this._CargarScripts.Carga(["crud/main"])
+  
+  }
+
 }
