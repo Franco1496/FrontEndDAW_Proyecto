@@ -11,16 +11,6 @@ import { AddPropiedadComponent } from './componentes/propiedad/add-propiedad/add
 import { EditPropiedadComponent } from './componentes/propiedad/edit-propiedad/edit-propiedad.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AddAsesoresComponent } from './componentes/asesores/add-asesores/add-asesores.component';
-import { EditAsesoresComponent } from './componentes/asesores/edit-asesores/edit-asesores.component';
-import { ListarAsesoresComponent } from './componentes/asesores/listar-asesores/listar-asesores.component';
-import { AddCitasComponent } from './componentes/citas/add-citas/add-citas.component';
-import { EditCitasComponent } from './componentes/citas/edit-citas/edit-citas.component';
-import { ListarCitasComponent } from './componentes/citas/listar-citas/listar-citas.component';
-import { AddVentasComponent } from './componentes/ventas/add-ventas/add-ventas.component';
-import { EditVentasComponent } from './componentes/ventas/edit-ventas/edit-ventas.component';
-import { ListarVentasComponent } from './componentes/ventas/listar-ventas/listar-ventas.component';
-import { AddAsesorComponent } from './componentes/asesores/add-asesor/add-asesor.component';
 import { EditAsesorComponent } from './componentes/asesor/edit-asesor/edit-asesor.component';
 import { ListarAsesorComponent } from './componentes/asesor/listar-asesor/listar-asesor.component';
 import { AddCitaComponent } from './componentes/cita/add-cita/add-cita.component';
@@ -39,16 +29,6 @@ import { ListarVentaComponent } from './componentes/venta/listar-venta/listar-ve
     ListarPropiedadComponent,
     AddPropiedadComponent,
     EditPropiedadComponent,
-    AddAsesoresComponent,
-    EditAsesoresComponent,
-    ListarAsesoresComponent,
-    AddCitasComponent,
-    EditCitasComponent,
-    ListarCitasComponent,
-    AddVentasComponent,
-    EditVentasComponent,
-    ListarVentasComponent,
-    AddAsesorComponent,
     EditAsesorComponent,
     ListarAsesorComponent,
     AddCitaComponent,
