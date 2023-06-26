@@ -16,7 +16,7 @@ constructor( private _CargarScripts: CargarScriptsService){
 }
 
 ngOnInit(): void {
-      
+
   this._CargarScripts.Carga(["crud/main"])
 
 }

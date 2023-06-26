@@ -16,22 +16,22 @@ export class AddClienteComponent implements OnInit{
   //clientes?:Cliente[];
 
   ubigeos?: Observable<Ubigeo[]>;
-  
+
   modelCliente = new Cliente();
 
   constructor(private router:Router, private clienteService:ClienteService, private ubigeoService:UbigeoService){}
 
 
-  
+
   ngOnInit(): void {
 
     this.ubigeos = this.ubigeoService.getUbigeoList();
-    
+
 
   }
 
   guardar(cliente: Cliente){
-    this.clienteService.createCliente(cliente).subscribe(data=>{
+    this.clienteService.createCliente(cliente).subscribe(()=>{
       this.router.navigate(['clientes']);
     });
   }
