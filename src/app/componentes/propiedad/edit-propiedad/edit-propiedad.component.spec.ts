@@ -6,14 +6,10 @@ describe('EditPropiedadComponent', () => {
   let component: EditPropiedadComponent;
   let fixture: ComponentFixture<EditPropiedadComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ EditPropiedadComponent ]
-    })
-    .compileComponents();
-  });
-
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [EditPropiedadComponent]
+    });
     fixture = TestBed.createComponent(EditPropiedadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

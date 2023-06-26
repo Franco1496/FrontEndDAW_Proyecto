@@ -17,8 +17,6 @@ import { UnidadMedidaService } from 'src/app/servicio/unidadMedida/unidad-medida
 })
 export class AddPropiedadComponent implements OnInit{
 
-  propiedades?:Propiedad[];
-
   ubigeos?: Observable<Ubigeo[]>;
 
   tipo?: Observable<TipoPropiedad[]>;
@@ -42,6 +40,14 @@ export class AddPropiedadComponent implements OnInit{
     this.propiedadService.createPropiedad(propiedad).subscribe(data=>{
       this.router.navigate(['propiedades']);
     });
+  }
+
+  listaClientes(){
+    this.router.navigate(['clientes']);
+  }
+
+  listaPropiedades(){
+    this.router.navigate(['propiedades']);
   }
 
 }

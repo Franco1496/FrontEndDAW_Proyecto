@@ -6,14 +6,10 @@ describe('AddPropiedadComponent', () => {
   let component: AddPropiedadComponent;
   let fixture: ComponentFixture<AddPropiedadComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ AddPropiedadComponent ]
-    })
-    .compileComponents();
-  });
-
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [AddPropiedadComponent]
+    });
     fixture = TestBed.createComponent(AddPropiedadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

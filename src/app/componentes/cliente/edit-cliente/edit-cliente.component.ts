@@ -38,4 +38,12 @@ export class EditClienteComponent implements OnInit{
     })
   }
 
+  listaCliente(){
+    this.router.navigate(['clientes']);
+  }
+
+  listaPropiedades(){
+    this.router.navigate(['propiedades']);
+  }
+
 }

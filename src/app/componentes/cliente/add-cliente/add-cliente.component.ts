@@ -21,9 +21,12 @@ export class AddClienteComponent implements OnInit{
 
   constructor(private router:Router, private clienteService:ClienteService, private ubigeoService:UbigeoService){}
 
+
+  
   ngOnInit(): void {
 
     this.ubigeos = this.ubigeoService.getUbigeoList();
+    
 
   }
 
@@ -31,6 +34,14 @@ export class AddClienteComponent implements OnInit{
     this.clienteService.createCliente(cliente).subscribe(data=>{
       this.router.navigate(['clientes']);
     });
+  }
+
+  listaCliente(){
+    this.router.navigate(['clientes']);
+  }
+
+  listaPropiedades(){
+    this.router.navigate(['propiedades']);
   }
 
 }

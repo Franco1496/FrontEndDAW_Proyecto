@@ -49,4 +49,13 @@ export class EditPropiedadComponent implements OnInit{
       this.router.navigate(['propiedades']);
     })
   }
+
+  listaClientes(){
+    this.router.navigate(['clientes']);
+  }
+
+  listaPropiedades(){
+    this.router.navigate(['propiedades']);
+  }
+  
 }

@@ -6,14 +6,10 @@ describe('EditClienteComponent', () => {
   let component: EditClienteComponent;
   let fixture: ComponentFixture<EditClienteComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ EditClienteComponent ]
-    })
-    .compileComponents();
-  });
-
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [EditClienteComponent]
+    });
     fixture = TestBed.createComponent(EditClienteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

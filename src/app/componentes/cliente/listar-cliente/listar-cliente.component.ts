@@ -37,6 +37,14 @@ export class ListarClienteComponent implements OnInit {
 
     }
 
+    listaClientes(){
+      this.router.navigate(['clientes']);
+    }
+
+    listaPropiedades(){
+      this.router.navigate(['propiedades']);
+    }
+
     nuevo():void{
       this.router.navigate(['nuevoCliente']);
     }
