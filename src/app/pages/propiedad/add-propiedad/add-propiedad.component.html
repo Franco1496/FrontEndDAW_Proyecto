@@ -1,237 +1,138 @@
-<main>
-    <div style=" float:left; height: 105vh; width: 250px; background: #303440;">
-  
-        <nav class="nav_main">
-        <ul class="list">
-  
-            <li class="list__item">
-                <div class="list__button">
-                    
-                    <a routerLink="clientes" href="" class="nav__link">INICIO</a>
-                </div>
-            </li>
-  
-            <li class="list__item list__item--click">
-                <div class="list__button list__button--click">
-                    
-                    <a href="" class="nav__link">MANTENIMIENTOS</a>
-                    <img src="assets/arrow.svg" class="list__arrow">
-                </div>
-  
-                <ul class="list__show">
-                    <li class="list__inside">
-                      <a (click)="listaClientes()" class="nav__link nav__link--inside">CLIENTES</a>
-                    </li>
-  
-                    <li class="list__inside">
-                      <a (click)="listaPropiedades()" class="nav__link nav__link--inside">PROPIDADES</a>
-                    </li>
-  
-                    <li class="list__inside">
-                      <a href="#" class="nav__link nav__link--inside">ASESORES</a>
-                    </li>
-  
-                    <li class="list__inside">
-                      <a href="#" class="nav__link nav__link--inside">CITAS</a>
-                    </li>
-  
-                    <li class="list__inside">
-                      <a href="#" class="nav__link nav__link--inside">VENTAS</a>
-                    </li>
-                </ul>
-  
-            </li>
-  
-            <li class="list__item list__item--click">
-                <div class="list__button list__button--click">
-                    
-                    <a href="#" class="nav__link">REPORTES</a>
-                    <img src="assets/arrow.svg" class="list__arrow">
-                </div>
-  
-                <ul class="list__show">
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">CLIENTES</a>
-                    </li>
-  
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">CITAS</a>
-                    </li>
-  
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">VENTAS</a>
-                    </li>
-                </ul>
-  
-            </li>
-  
-  
-            <li class="list__item">
-                <div class="list__button">
-                    
-                    <a href="#" class="nav__link">CERRAR SESION</a>
-                </div>
-            </li>
-  
-        </ul>
-    </nav>
-        
-    </div>
-        
-      
-   
-  
-    <!--
-    <script src="./../../../assets/js/crud/main.js"></script>
-    -->
-  
-    <script src="./../../../../assets/js/crud/main.js"></script>
-  
-  
-  
-    
-    <div style="margin-left:250px">
-  
-        <section>
-      <div style="margin-left: 2%; 
+<app-menu-izquierda></app-menu-izquierda>
+
+
+
+
+<div style="margin-left:250px">
+
+  <section>
+    <div style="margin-left: 2%;
       margin-right: 2%;">
-  
-  
-  
-  
-  
-  <div class="card col-md-6">
-    <div class="card-header">
-      <h3> Agregar Propiedad</h3>  
-    </div>
-  
-    <div class="card-body"> 
-      <form action="">
-        <div class="form-group">
-            <label for="">Dirección:</label>
-            <input type="text" [(ngModel)]="modelPropiedad.direccionPropiedad" name="direccionPropiedad" class="form-control">
+
+
+
+
+
+      <div class="card col-md-6">
+        <div class="card-header">
+          <h3> Agregar Propiedad</h3>
         </div>
-  
-        <div class="form-group">
-            <label for="">Ubigeo:</label>
-            <select name="ubigeo" class="form-control" [(ngModel)]="modelPropiedad.idUbigeo.id_ubigeo">
+
+        <div class="card-body">
+          <form action="">
+            <div class="form-group">
+              <label for="">Dirección:</label>
+              <input type="text" [(ngModel)]="modelPropiedad.direccionPropiedad" name="direccionPropiedad"
+                class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="">Ubigeo:</label>
+              <select name="ubigeo" class="form-control" [(ngModel)]="modelPropiedad.idUbigeo.id_ubigeo">
                 <option>--Seleccionar--</option>
                 <option *ngFor="let ubigeo of ubigeos | async" [value]="ubigeo.id_ubigeo">
-                    {{ubigeo.distrito}}
+                  {{ubigeo.distrito}}
                 </option>
-            </select>
-            <!--
+              </select>
+              <!--
             <input type="text" [(ngModel)]="modelCliente.ape_cliente" name="ape_cliente" class="form-control">
             -->
-        </div>
+            </div>
 
-        <div class="form-group">
-            <label for="">Tipo Propiedad:</label>
-            <select name="tipo" class="form-control" [(ngModel)]="modelPropiedad.idTipoPropiedad.id_tipo_propiedad">
+            <div class="form-group">
+              <label for="">Tipo Propiedad:</label>
+              <select name="tipo" class="form-control" [(ngModel)]="modelPropiedad.idTipoPropiedad.id_tipo_propiedad">
                 <option>--Seleccionar--</option>
                 <option *ngFor="let tipo of tipo | async" [value]="tipo.id_tipo_propiedad">
-                    {{tipo.tipo_propiedad}}
+                  {{tipo.tipo_propiedad}}
                 </option>
-            </select>
-            <!--
+              </select>
+              <!--
             <input type="text" [(ngModel)]="modelCliente.ape_cliente" name="ape_cliente" class="form-control">
             -->
-        </div>
-  
-        <div class="form-group">
-            <label for="">Habitaciones:</label>
-            <input type="text" [(ngModel)]="modelPropiedad.cantidadHabitaciones" name="cantidadHabitaciones" class="form-control">
-        </div>
+            </div>
 
-        <div class="form-group">
-            <label for="">Baños:</label>
-            <input type="text" [(ngModel)]="modelPropiedad.cantidadBanhos" name="cantidadBanhos" class="form-control">
-        </div>
+            <div class="form-group">
+              <label for="">Habitaciones:</label>
+              <input type="text" [(ngModel)]="modelPropiedad.cantidadHabitaciones" name="cantidadHabitaciones"
+                class="form-control">
+            </div>
 
-        <div class="form-group">
-            <label for="">Area Total:</label>
-            <input type="text" [(ngModel)]="modelPropiedad.areaTotal" name="areaTotal" class="form-control">
-        </div>
+            <div class="form-group">
+              <label for="">Baños:</label>
+              <input type="text" [(ngModel)]="modelPropiedad.cantidadBanhos" name="cantidadBanhos" class="form-control">
+            </div>
 
-        <div class="form-group">
-            <label for="">Unidad Medida:</label>
-            
-            <select name="medida" class="form-control" [(ngModel)]="modelPropiedad.idUnidadMedida.id_unidad_medida">
+            <div class="form-group">
+              <label for="">Area Total:</label>
+              <input type="text" [(ngModel)]="modelPropiedad.areaTotal" name="areaTotal" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="">Unidad Medida:</label>
+
+              <select name="medida" class="form-control" [(ngModel)]="modelPropiedad.idUnidadMedida.id_unidad_medida">
                 <option>--Seleccionar--</option>
                 <option *ngFor="let medida of medida | async" [value]="medida.id_unidad_medida">
-                    {{medida.unidad_medida}}
+                  {{medida.unidad_medida}}
                 </option>
-            </select>
-            
-            <!--
+              </select>
+
+              <!--
             <input type="text" [(ngModel)]="modelCliente.id_ubigeo.id_ubigeo" name="distrito" class="form-control">
             -->
 
-        </div>
+            </div>
 
-        <div class="form-group">
-            <label for="">Precio:</label>
-            <input type="text" [(ngModel)]="modelPropiedad.precioVenta" name="precioVenta" class="form-control">
-        </div>
+            <div class="form-group">
+              <label for="">Precio:</label>
+              <input type="text" [(ngModel)]="modelPropiedad.precioVenta" name="precioVenta" class="form-control">
+            </div>
 
-        <div class="form-group">
-            <label for="">Disponibilidad:</label>
-            <select name="disponibleVenta" class="form-control" [(ngModel)]="modelPropiedad.disponibleVenta">
+            <div class="form-group">
+              <label for="">Disponibilidad:</label>
+              <select name="disponibleVenta" class="form-control" [(ngModel)]="modelPropiedad.disponibleVenta">
                 <option>--Seleccionar--</option>
                 <option value="true">DISPONIBLE</option>
                 <option value="false">VENDIDO</option>
-            </select>
-            
-            <!--
+              </select>
+
+              <!--
             <input type="text" [(ngModel)]="modelPropiedad.disponibleVenta" name="disponibleVenta" class="form-control">
             -->
-        </div>
+            </div>
 
-        <!--
+            <!--
         <div class="form-row">
             <div class="form-group col-md-4">
           <label for="">Subir Imagen:</label>
           <input type="file" name="img_propiedad" class="m-2" [(ngModel)]="modelPropiedad.img_propiedad">
             </div>
         </div>
-        
+
         <div class="form-group">
             <label for="">Estado:</label>
             <input type="text" [(ngModel)]="modelCliente.flag_estado" name="distrito" class="form-control">
         </div>
         -->
-        <button (click)="guardar(modelPropiedad)" class="btn btn-danger">Guardar</button>
-  
-      </form>
-  
-  
-  
-    </div>
-  
-  </div>
-  
-  
-            
-  
-        
-  
-  
+            <button (click)="guardar(modelPropiedad)" class="btn btn-danger">Guardar</button>
+
+          </form>
+
+
+
+        </div>
+
       </div>
-  
-    </section>
-        
+
+
+
+
+
+
+
     </div>
-    
-  
-    </main>
 
+  </section>
 
-
-
-
-
-
-
-
-
-
+</div>

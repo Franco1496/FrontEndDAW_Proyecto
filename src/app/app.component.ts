@@ -9,15 +9,15 @@ import { CargarScriptsService } from './servicio/cargar-scripts.service';
 export class AppComponent implements OnInit {
   title = 'ProyectoDAWII';
 
-constructor( private _CargarScripts: CargarScriptsService){
-
+constructor( ){
+  // private _CargarScripts: CargarScriptsService
   //_CargarScripts.Carga(["crud/main"])
 
 }
 
 ngOnInit(): void {
 
-  this._CargarScripts.Carga(["crud/main"])
+  // this._CargarScripts.Carga(["crud/main"])
 
 }
 

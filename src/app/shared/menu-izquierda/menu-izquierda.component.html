@@ -1,0 +1,101 @@
+<main>
+  <div style=" float:left; height: 105vh; width: 250px; background: #303440;">
+
+    <nav class="nav_main">
+      <ul class="list">
+
+        <li *ngFor="let item of menuItems" class="list__item list__item--click">
+          <div class="list__button list__button--click">
+
+            <a href="" class="nav__link">{{ item.titulo }}</a>
+            <img *ngIf="item.submenu" src="assets/arrow.svg" class="list__arrow">
+          </div>
+
+
+          <ul *ngIf="item.submenu" class="list__show">
+            <li *ngFor="let subMenuItem of item.submenu" class="list__inside">
+              <a class="nav__link nav__link--inside" routerLink="{{ subMenuItem.url }}">{{ subMenuItem.titulo }}</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <!-- <li class="list__item">
+          <div class="list__button">
+
+            <a routerLink="clientes" href="" class="nav__link">INICIO</a>
+          </div>
+        </li>
+
+        <li class="list__item list__item--click">
+          <div class="list__button list__button--click">
+
+            <a href="" class="nav__link">MANTENIMIENTOS</a>
+            <img src="assets/arrow.svg" class="list__arrow">
+          </div>
+
+          <ul class="list__show">
+            <li class="list__inside">
+              <a routerLink="/clientes" class="nav__link nav__link--inside">CLIENTES</a>
+            </li>
+
+            <li class="list__inside">
+              <a routerLink="/propiedades" class="nav__link nav__link--inside">PROPIDADES</a>
+            </li>
+
+            <li class="list__inside">
+              <a href="#" class="nav__link nav__link--inside">ASESORES</a>
+            </li>
+
+            <li class="list__inside">
+              <a href="#" class="nav__link nav__link--inside">CITAS</a>
+            </li>
+
+            <li class="list__inside">
+              <a href="#" class="nav__link nav__link--inside">VENTAS</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="list__item list__item--click">
+          <div class="list__button list__button--click">
+
+            <a href="#" class="nav__link">REPORTES</a>
+            <img src="assets/arrow.svg" class="list__arrow">
+          </div>
+
+          <ul class="list__show">
+            <li class="list__inside">
+              <a href="#" class="nav__link nav__link--inside">CLIENTES</a>
+            </li>
+
+            <li class="list__inside">
+              <a href="#" class="nav__link nav__link--inside">CITAS</a>
+            </li>
+
+            <li class="list__inside">
+              <a href="#" class="nav__link nav__link--inside">VENTAS</a>
+            </li>
+          </ul>
+
+        </li>
+
+
+        <li class="list__item">
+          <div class="list__button">
+
+            <a href="#" class="nav__link">CERRAR SESION</a>
+          </div>
+        </li> -->
+
+      </ul>
+    </nav>
+
+  </div>
+
+</main>
+
+<script src="../../../../assets/js/crud/main.js"></script>
+
+<!-- ../../../../assets/js/crud/main.js -->

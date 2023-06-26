@@ -1,160 +1,65 @@
-<main>
-  <div style=" float:left; height: 105vh; width: 250px; background: #303440;">
+<app-menu-izquierda></app-menu-izquierda>
 
-      <nav class="nav_main">
-      <ul class="list">
+<div style="margin-left:250px">
 
-          <li class="list__item">
-              <div class="list__button">
-                  
-                  <a routerLink="clientes" href="" class="nav__link">INICIO</a>
-              </div>
-          </li>
-
-          <li class="list__item list__item--click">
-              <div class="list__button list__button--click">
-                  
-                  <a href="" class="nav__link">MANTENIMIENTOS</a>
-                  <img src="assets/arrow.svg" class="list__arrow">
-              </div>
-
-              <ul class="list__show">
-                  <li class="list__inside">
-                    <a (click)="listaClientes()" class="nav__link nav__link--inside">CLIENTES</a>
-                  </li>
-
-                  <li class="list__inside">
-                    <a (click)="listaPropiedades()" class="nav__link nav__link--inside">PROPIDADES</a>
-                  </li>
-
-                  <li class="list__inside">
-                    <a href="#" class="nav__link nav__link--inside">ASESORES</a>
-                  </li>
-
-                  <li class="list__inside">
-                    <a href="#" class="nav__link nav__link--inside">CITAS</a>
-                  </li>
-
-                  <li class="list__inside">
-                    <a href="#" class="nav__link nav__link--inside">VENTAS</a>
-                  </li>
-              </ul>
-
-          </li>
-
-          <li class="list__item list__item--click">
-              <div class="list__button list__button--click">
-                  
-                  <a href="#" class="nav__link">REPORTES</a>
-                  <img src="assets/arrow.svg" class="list__arrow">
-              </div>
-
-              <ul class="list__show">
-                  <li class="list__inside">
-                      <a href="#" class="nav__link nav__link--inside">CLIENTES</a>
-                  </li>
-
-                  <li class="list__inside">
-                      <a href="#" class="nav__link nav__link--inside">CITAS</a>
-                  </li>
-
-                  <li class="list__inside">
-                      <a href="#" class="nav__link nav__link--inside">VENTAS</a>
-                  </li>
-              </ul>
-
-          </li>
-
-
-          <li class="list__item">
-              <div class="list__button">
-                  
-                  <a href="#" class="nav__link">CERRAR SESION</a>
-              </div>
-          </li>
-
-      </ul>
-  </nav>
-      
-  </div>
-      
-    
- 
-
-  <!--
-  <script src="./../../../assets/js/crud/main.js"></script>
-  -->
-
-  <script src="./../../../../assets/js/crud/main.js"></script>
-
-
-
-  
-  <div style="margin-left:250px">
-
-      <section>
-    <div style="margin-left: 2%; 
+  <section>
+    <div style="margin-left: 2%;
     margin-right: 2%;">
 
 
 
-<div >
-  <h2>LISTADO DE CLIENTES</h2>
-</div>
+      <div>
+        <h2>LISTADO DE CLIENTES</h2>
+      </div>
 
-<button (click)="nuevo()" class="btn btn-primary">Agregar</button>
+      <button (click)="nuevo()" class="btn btn-primary">Agregar</button>
 
-<br>
-<br>
+      <br>
+      <br>
 
-<script src="./../../assets/js/crud/table.js"></script>
+      <script src="./../../assets/js/crud/table.js"></script>
 
-<table id="example" class="table table-striped">
-    <thead>
-      <tr>
-        <th >Id Cliente</th>
-        <th >Nombre</th>
-        <th >Apellido</th>
-        <th >Documento</th>
-        <th >Ubigeo</th>
-        <th >Dirección</th>
-        <th >Teléfono</th>
-        <th >Correo</th>
-        <th >Accciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let cliente of clientes">
-        <th scope="row">{{cliente.id_cliente}}</th>
-        <td>{{cliente.nom_cliente}}</td>
-        <td>{{cliente.ape_cliente}}</td>
-        <td>{{cliente.documento}}</td>
-        <td>{{cliente.id_ubigeo.distrito}}</td>
-        <td>{{cliente.dir_cliente}}</td>
-        <td>{{cliente.tel_cliente}}</td>
-        <td>{{cliente.correo_cliente}}</td>
-        <td>
-          <button (click)="editar(cliente)" class="btn btn-success">Editar</button>
-          <button (click)="eliminar(cliente)" class="btn btn-danger">Eliminar</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      <table id="example" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id Cliente</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Documento</th>
+            <th>Ubigeo</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Accciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <th scope="row">{{cliente.id_cliente}}</th>
+            <td>{{cliente.nom_cliente}}</td>
+            <td>{{cliente.ape_cliente}}</td>
+            <td>{{cliente.documento}}</td>
+            <td>{{cliente.id_ubigeo.distrito}}</td>
+            <td>{{cliente.dir_cliente}}</td>
+            <td>{{cliente.tel_cliente}}</td>
+            <td>{{cliente.correo_cliente}}</td>
+            <td>
+              <button (click)="editar(cliente)" class="btn btn-success">Editar</button>
+              <button (click)="eliminar(cliente)" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
 
 
-          
 
-      
+
+
 
 
     </div>
 
   </section>
-      
-  </div>
-  
 
-  </main>
-
-
+</div>

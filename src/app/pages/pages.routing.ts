@@ -10,6 +10,15 @@ import { EditClienteComponent } from "./cliente/edit-cliente/edit-cliente.compon
 import { ListarPropiedadComponent } from "./propiedad/listar-propiedad/listar-propiedad.component";
 import { AddPropiedadComponent } from "./propiedad/add-propiedad/add-propiedad.component";
 import { EditPropiedadComponent } from "./propiedad/edit-propiedad/edit-propiedad.component";
+import { AddVentaComponent } from "./venta/add-venta/add-venta.component";
+import { ListarVentaComponent } from "./venta/listar-venta/listar-venta.component";
+import { EditVentaComponent } from "./venta/edit-venta/edit-venta.component";
+import { ListarAsesorComponent } from "./asesor/listar-asesor/listar-asesor.component";
+import { AddAsesorComponent } from "./asesor/add-asesor/add-asesor.component";
+import { EditAsesorComponent } from "./asesor/edit-asesor/edit-asesor.component";
+import { ListarCitaComponent } from "./cita/listar-cita/listar-cita.component";
+import { AddCitaComponent } from "./cita/add-cita/add-cita.component";
+import { EditCitaComponent } from "./cita/edit-cita/edit-cita.component";
 
 
 const routes: Routes = [
@@ -30,7 +39,19 @@ const routes: Routes = [
       { path: "editarPropiedad", component: EditPropiedadComponent },
 
       { path: "listaPropiedades", component: ListaPropiedadesComponent },
-      { path: "login", component: LoginComponent }
+      { path: "login", component: LoginComponent },
+
+      { path: "venta", component: ListarVentaComponent },
+      { path: "nuevaVenta", component: AddVentaComponent },
+      { path: "editarVenta", component: EditVentaComponent },
+
+      { path: "asesor", component: ListarAsesorComponent },
+      { path: "nuevoAsesor", component: AddAsesorComponent },
+      { path: "editarAsesor", component: EditAsesorComponent },
+
+      { path: "cita", component: ListarCitaComponent },
+      { path: "nuevaCita", component: AddCitaComponent },
+      { path: "editarCita", component: EditCitaComponent },
 
 
     ]
