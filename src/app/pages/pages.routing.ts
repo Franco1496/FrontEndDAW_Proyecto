@@ -19,6 +19,7 @@ import { EditAsesorComponent } from "./asesor/edit-asesor/edit-asesor.component"
 import { ListarCitaComponent } from "./cita/listar-cita/listar-cita.component";
 import { AddCitaComponent } from "./cita/add-cita/add-cita.component";
 import { EditCitaComponent } from "./cita/edit-cita/edit-cita.component";
+import { IntranetComponent } from "./intranet/intranet.component";
 
 
 const routes: Routes = [
@@ -30,29 +31,34 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      { path: "clientes", component: ListarClienteComponent },
-      { path: "nuevoCliente", component: AddClienteComponent },
-      { path: "editarCliente", component: EditClienteComponent },
+      {
+        path: 'intranet',
+        component: IntranetComponent,
+        children: [
+          { path: '', redirectTo: 'clientes', pathMatch: 'full' },
+          { path: "clientes", component: ListarClienteComponent },
+          { path: "nuevoCliente", component: AddClienteComponent },
+          { path: "editarCliente", component: EditClienteComponent },
 
-      { path: "propiedades", component: ListarPropiedadComponent },
-      { path: "nuevaPropiedad", component: AddPropiedadComponent },
-      { path: "editarPropiedad", component: EditPropiedadComponent },
+          { path: "propiedades", component: ListarPropiedadComponent },
+          { path: "nuevapropiedad", component: AddPropiedadComponent },
+          { path: "editarpropiedad", component: EditPropiedadComponent },
 
+          { path: "venta", component: ListarVentaComponent },
+          { path: "nuevaventa", component: AddVentaComponent },
+          { path: "editarventa", component: EditVentaComponent },
+
+          { path: "asesor", component: ListarAsesorComponent },
+          { path: "nuevoasesor", component: AddAsesorComponent },
+          { path: "editarasesor", component: EditAsesorComponent },
+
+          { path: "cita", component: ListarCitaComponent },
+          { path: "nuevacita", component: AddCitaComponent },
+          { path: "editarcita", component: EditCitaComponent },
+        ]
+      },
       { path: "listaPropiedades", component: ListaPropiedadesComponent },
       { path: "login", component: LoginComponent },
-
-      { path: "venta", component: ListarVentaComponent },
-      { path: "nuevaVenta", component: AddVentaComponent },
-      { path: "editarVenta", component: EditVentaComponent },
-
-      { path: "asesor", component: ListarAsesorComponent },
-      { path: "nuevoAsesor", component: AddAsesorComponent },
-      { path: "editarAsesor", component: EditAsesorComponent },
-
-      { path: "cita", component: ListarCitaComponent },
-      { path: "nuevaCita", component: AddCitaComponent },
-      { path: "editarCita", component: EditCitaComponent },
-
 
     ]
   }
