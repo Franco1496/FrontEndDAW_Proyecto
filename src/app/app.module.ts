@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 
 import { CargarScriptsService } from './servicio/cargar-scripts.service';
 import { PagesModule } from './pages/pages.module';
+import { RegistroComponent } from './auth/registro.component';
+import { LoginComponent } from './auth/login.component';
 // import { EditAsesorComponent } from './componentes/asesor/edit-asesor/edit-asesor.component';
 // import { ListarAsesorComponent } from './componentes/asesor/listar-asesor/listar-asesor.component';
 // import { AddCitaComponent } from './componentes/cita/add-cita/add-cita.component';
@@ -20,6 +22,9 @@ import { PagesModule } from './pages/pages.module';
 @NgModule({
   declarations: [
     AppComponent,
+    //LoginComponent,
+    RegistroComponent,
+    LoginComponent
     // ListarClienteComponent,
     // AddClienteComponent,
     // EditClienteComponent,
