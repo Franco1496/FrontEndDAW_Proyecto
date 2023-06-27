@@ -21,10 +21,8 @@ import { AddCitaComponent } from "./cita/add-cita/add-cita.component";
 import { EditCitaComponent } from "./cita/edit-cita/edit-cita.component";
 import { ListaAsesoresComponent } from "./vistaCliente/lista-asesores/lista-asesores.component";
 import { ContactanosComponent } from "./vistaCliente/contactanos/contactanos.component";
-<<<<<<< HEAD
 import { NosotrosComponent } from "./vistaCliente/nosotros/nosotros.component";
-=======
->>>>>>> d02b0c4bfde2a0a2eb67e40af4eb8a1eb8b6f194
+
 
 
 const routes: Routes = [
@@ -60,12 +58,12 @@ const routes: Routes = [
       { path: "nuevaCita", component: AddCitaComponent },
       { path: "editarCita", component: EditCitaComponent },
 
-<<<<<<< HEAD
+
       { path: "contactanos", component:ContactanosComponent },
-      { path: "nosotros", component:NosotrosComponent}
-=======
+      { path: "nosotros", component:NosotrosComponent},
+
       { path: "contactanos", component:ContactanosComponent }
->>>>>>> d02b0c4bfde2a0a2eb67e40af4eb8a1eb8b6f194
+
 
 
     ]
