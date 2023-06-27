@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CargarScriptsService } from './servicio/cargar-scripts.service';
 
 @Component({
@@ -6,19 +6,19 @@ import { CargarScriptsService } from './servicio/cargar-scripts.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'FrontEndDAW';
+export class AppComponent implements OnInit {
+  title = 'ProyectoDAWII';
 
-  constructor( private _CargarScripts: CargarScriptsService){
+constructor( ){
+  // private _CargarScripts: CargarScriptsService
+  //_CargarScripts.Carga(["crud/main"])
 
-    //_CargarScripts.Carga(["crud/main"])
-  
-  }
-  
-  ngOnInit(): void {
-        
-    this._CargarScripts.Carga(["crud/main"])
-  
-  }
+}
+
+ngOnInit(): void {
+
+  // this._CargarScripts.Carga(["crud/main"])
+
+}
 
 }

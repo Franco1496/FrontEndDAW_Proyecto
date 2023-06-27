@@ -33,6 +33,8 @@ export class Propiedad{
 
     //@Column(name = "disponible_venta")
     disponibleVenta: string;
+
+    //img_propiedad: string;
     
     constructor(){
         this.idPropiedad = 0;
@@ -45,6 +47,7 @@ export class Propiedad{
         this.idUnidadMedida = new UnidadMedida();
         this.precioVenta = 0;
         this.disponibleVenta = "";
+        //this.img_propiedad = "";
     }
 
 }

@@ -1,0 +1,24 @@
+<main>
+  <div class="menu-container">
+    <nav class="nav_main">
+      <ul class="list">
+        <li *ngFor="let item of menuItems" class="list__item">
+          <div class="list__button" (click)="toggleSubMenu(item)">
+            <a class="nav__link">{{ item.titulo }}</a>
+            <img *ngIf="item.submenu" src="assets/arrow.svg" class="list__arrow">
+          </div>
+          <ul *ngIf="item.submenu" class="submenu" [ngClass]="{'show': item.active}">
+            <li *ngFor="let subMenuItem of item.submenu" class="list__inside">
+              <a [routerLink]="subMenuItem.url" class="nav__link nav__link--inside">{{ subMenuItem.titulo }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</main>
+
+
+<script src="../../../../assets/js/crud/main.js"></script>
+
+<!-- ../../../../assets/js/crud/main.js -->

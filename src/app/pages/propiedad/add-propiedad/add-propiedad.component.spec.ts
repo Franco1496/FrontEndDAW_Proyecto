@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { AddPropiedadComponent } from './add-propiedad.component';
+
+describe('AddPropiedadComponent', () => {
+  let component: AddPropiedadComponent;
+  let fixture: ComponentFixture<AddPropiedadComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [AddPropiedadComponent]
+    });
+    fixture = TestBed.createComponent(AddPropiedadComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

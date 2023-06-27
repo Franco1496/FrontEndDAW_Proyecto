@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Propiedad } from 'src/app/modelos/Propiedad';
+//import { Ubigeo } from 'src/app/modelos/Ubigeo';
 
 @Injectable({
   providedIn: 'root'
@@ -30,4 +31,11 @@ export class PropiedadService {
   deletePropiedad(propiedad: Propiedad){
     return this.http.delete<Propiedad>(this.url+"/propiedad/"+propiedad.idPropiedad);
   }
+
+  /*
+  getUbigeoList(){
+    return this.http.get<Ubigeo[]>(this.url+"/ubigeo/");
+
+  }
+  */
 }

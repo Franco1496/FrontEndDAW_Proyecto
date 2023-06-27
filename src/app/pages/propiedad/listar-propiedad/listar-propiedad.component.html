@@ -1,0 +1,72 @@
+<app-menu-izquierda></app-menu-izquierda>
+
+
+
+
+<div style="margin-left:250px">
+
+  <section>
+    <div style="margin-left: 2%;
+    margin-right: 2%;">
+
+
+
+      <div>
+        <h2>LISTADO DE PROPIEDADES</h2>
+      </div>
+
+      <button (click)="nuevo()" class="btn btn-primary">Agregar</button>
+
+      <br>
+      <br>
+
+      <script src="./../../assets/js/crud/table.js"></script>
+
+      <table id="example" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id Propiedad</th>
+            <th>Dirección</th>
+            <th>Ubigeo</th>
+            <th>Tipo</th>
+            <th>Habitaciones</th>
+            <th>Baños</th>
+            <th>Area Total</th>
+            <th>Unidad Medida</th>
+            <th>Precio</th>
+            <th>Disponibilidad</th>
+            <th>Accciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let propiedad of propiedades">
+            <th scope="row">{{propiedad.idPropiedad}}</th>
+            <td>{{propiedad.direccionPropiedad}}</td>
+            <td>{{propiedad.idUbigeo.distrito}}</td>
+            <td>{{propiedad.idTipoPropiedad.tipo_propiedad}}</td>
+            <td>{{propiedad.cantidadHabitaciones}}</td>
+            <td>{{propiedad.cantidadBanhos}}</td>
+            <td>{{propiedad.areaTotal}}</td>
+            <td>{{propiedad.idUnidadMedida.unidad_medida}}</td>
+            <td>{{propiedad.precioVenta}}</td>
+            <td>{{propiedad.disponibleVenta}}</td>
+            <td>
+              <button (click)="editar(propiedad)" class="btn btn-success">Editar</button>
+              <button (click)="eliminar(propiedad)" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+
+
+
+
+    </div>
+
+  </section>
+
+</div>

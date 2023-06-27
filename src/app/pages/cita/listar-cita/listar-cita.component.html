@@ -1,0 +1,62 @@
+<app-menu-izquierda></app-menu-izquierda>
+
+<div style="margin-left:250px">
+
+  <section>
+    <div style="margin-left: 2%;
+    margin-right: 2%;">
+
+
+<div>
+  <h2>LISTADO DE CITAS</h2>
+</div>
+
+<button (click)="nuevo()" class="btn btn-primary">Agregar</button>
+
+<br>
+<br>
+
+<script src="./../../assets/js/crud/table.js"></script>
+
+<table id="example" class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id Cita</th>
+      <th>Propiedad asesor</th>
+      <th>Nombre del Cliente</th>
+      <th>Fecha de Cita</th>
+      <th>Hora de la cita</th>
+      <th>Fecha de creacion</th>
+      <th>Estado</th>
+      <th>Accciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cita of citas">
+      <th scope="row">{{cita.id_cita}}</th>
+      <td>{{cita.id_propiedad_asesor.id_propiedad} }</td>
+      <td>{{cita.id_cliente.nom_cliente}}</td>
+      <td>{{cita.fec_cita}}</td>
+      <td>{{cita.hora_cita}}</td>
+      <td>{{cita.fec_creacion}}</td>
+      <td>{{cita.flag_estado}}</td>
+      <td>
+        <button (click)="editar(cita)" class="btn btn-success">Editar</button>
+        <button (click)="eliminar(cita)" class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+</div>
+
+</section>
+
+</div>

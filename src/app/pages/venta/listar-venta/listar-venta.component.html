@@ -1,0 +1,50 @@
+<app-menu-izquierda></app-menu-izquierda>
+<div style="margin-left:250px">
+
+  <section>
+    <div style="margin-left: 2%;
+    margin-right: 2%;">
+      <div style="margin-left:250px">
+        
+        <h2>LISTADO DE VENTAS</h2>
+      </div>
+
+      <button (click)="nuevo()" class="btn btn-primary">Agregar</button>
+
+      <br>
+      <br>
+
+      <script src="./../../assets/js/crud/table.js"></script>
+
+      <table id="example" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id Asesor</th>
+            <th>Precio Venta</th>
+            <th>Nombre Cliente</th>
+            <th>Monto Venta</th>
+            <th>Fecha Creacion</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let venta of ventas">
+            <th scope="row">{{venta.id_venta}}</th>
+            <td>{{venta.id_propiedad_asesor.id_propiedad.precioVenta }}</td>
+            <td>{{venta.id_cliente.nom_cliente}}</td>
+            <td>{{venta.monto_venta}}</td>
+            <td>{{venta.fec_creacion}}</td>
+            <td>{{venta.flag_estado}}</td>
+            <td>
+              <button (click)="editar(venta)" class="btn btn-success">Editar</button>
+              <button (click)="eliminar(venta)" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+</div>
