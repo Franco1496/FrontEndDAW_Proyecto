@@ -1,2 +1,72 @@
 <app-menu-izquierda></app-menu-izquierda>
-<p>edit-cita works!</p>
+
+
+
+<div style="margin-left:250px">
+
+  <section>
+    <div style="margin-left: 2%;
+      margin-right: 2%;">
+
+
+
+
+      <div class="card col-md-6">
+        <div class="card-header">
+          <h3> Actualizar Cita</h3>
+        </div>
+
+        <div class="card-body">
+          <form action="">
+            <div class="form-group">
+              <label for="">Nombre Asesor:</label>
+              <input type="text" [(ngModel)]="cita.id_propiedad_asesor.id_asesor.nom_asesor" name="nom_asesor" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Nombre Ciente:</label>
+                <input type="text" [(ngModel)]="cita.id_cliente.nom_cliente" name="nom_cliente" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="">Fecha de Cita:</label>
+                <input type="text" [(ngModel)]="cita.fec_cita" name="fec_cita" class="form-control">
+              </div>
+
+            <div class="form-group">
+              <label for="">Hora de Cita:</label>
+              <input type="text" [(ngModel)]="cita.hora_cita" name="hora_cita" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="">Fecha de creacion:</label>
+              <input type="text" [(ngModel)]="cita.fec_creacion" name="fec_creacion" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Estado:</label>
+                <input type="text" [(ngModel)]="cita.flag_estado" name="flag_estado" class="form-control">
+              </div>
+
+
+            <button (click)="actualizar(cita)" class="btn btn-danger">Guardar</button>
+
+          </form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </section>
+
+</div>
+
+

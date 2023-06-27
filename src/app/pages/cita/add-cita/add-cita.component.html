@@ -1,2 +1,72 @@
 <app-menu-izquierda></app-menu-izquierda>
-<p>add-cita works!</p>
+
+
+
+<div style="margin-left:250px">
+
+  <section>
+    <div style="margin-left: 2%;
+      margin-right: 2%;">
+
+
+
+
+      <div class="card col-md-6">
+        <div class="card-header">
+          <h3> Agregar Cita</h3>
+        </div>
+
+        <div class="card-body">
+          <form action="">
+            <div class="form-group">
+              <label for="">Nombre Asesor:</label>
+              <input type="text" [(ngModel)]="modelCita.id_propiedad_asesor.id_asesor.nom_asesor" name="nom_asesor" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Nombre Ciente:</label>
+                <input type="text" [(ngModel)]="modelCita.id_cliente.nom_cliente" name="nom_cliente" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="">Fecha de Cita:</label>
+                <input type="text" [(ngModel)]="modelCita.fec_cita" name="fec_cita" class="form-control">
+              </div>
+
+            <div class="form-group">
+              <label for="">Hora de Cita:</label>
+              <input type="text" [(ngModel)]="modelCita.hora_cita" name="hora_cita" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="">Fecha de creacion:</label>
+              <input type="text" [(ngModel)]="modelCita.fec_creacion" name="fec_creacion" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Estado:</label>
+                <input type="text" [(ngModel)]="modelCita.flag_estado" name="flag_estado" class="form-control">
+              </div>
+
+
+            <button (click)="guardar(modelCita)" class="btn btn-danger">Guardar</button>
+
+          </form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </section>
+
+</div>
+
+

@@ -25,35 +25,30 @@
 
             <div class="form-group">
                 <label for="">Apellido</label>
-                <input type="text" [(ngModel)]="modelAsesor.nom_asesor" name="nom_asesor" class="form-control">
+                <input type="text" [(ngModel)]="modelAsesor.ape_asesor" name="ape_asesor" class="form-control">
               </div>
               <div class="form-group">
                 <label for="">Telefono</label>
-                <input type="text" [(ngModel)]="modelAsesor.nom_asesor" name="nom_asesor" class="form-control">
+                <input type="text" [(ngModel)]="modelAsesor.tel_asesor" name="tel_asesor" class="form-control">
               </div>
 
               <div class="form-group">
                 <label for="">Correo Electronico</label>
-                <input type="text" [(ngModel)]="modelAsesor.nom_asesor" name="nom_asesor" class="form-control">
+                <input type="text" [(ngModel)]="modelAsesor.correo_asesor" name="correo_asesor" class="form-control">
               </div>
               <div class="form-group">
                 <label for="">Password</label>
-                <input type="text" [(ngModel)]="modelAsesor.nom_asesor" name="nom_asesor" class="form-control">
+                <input type="text" [(ngModel)]="modelAsesor.pass_asesor" name="pass_asesor" class="form-control">
               </div>
 
               <div class="form-group">
-                <label for="">Fecha creación</label>
-                <input
-                  type="date"
-                  [(ngModel)]="modelAsesor.fecha_creacion"
-                  name="fecha_creacion"
-                  class="form-control"
-                >
+                <label for="">Fecha creacion</label>
+                <input type="text" [(ngModel)]="modelAsesor.fec_creacion" name="fec_creacion" class="form-control">
               </div>
 
               <div class="form-group">
                 <label for="">Nombre:</label>
-                <input type="text" [(ngModel)]="modelAsesor.nom_asesor" name="nom_asesor" class="form-control">
+                <input type="text" [(ngModel)]="modelAsesor.flag_estado" name="flag_estado" class="form-control">
               </div>
 
             <button (click)="guardar(modelAsesor)" class="btn btn-danger">Guardar</button>
