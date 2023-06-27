@@ -19,6 +19,7 @@ import { EditAsesorComponent } from "./asesor/edit-asesor/edit-asesor.component"
 import { ListarCitaComponent } from "./cita/listar-cita/listar-cita.component";
 import { AddCitaComponent } from "./cita/add-cita/add-cita.component";
 import { EditCitaComponent } from "./cita/edit-cita/edit-cita.component";
+import { ListaAsesoresComponent } from "./vistaCliente/lista-asesores/lista-asesores.component";
 
 
 const routes: Routes = [
@@ -39,6 +40,7 @@ const routes: Routes = [
       { path: "editarPropiedad", component: EditPropiedadComponent },
 
       { path: "listaPropiedades", component: ListaPropiedadesComponent },
+      { path: "listaAsesores", component: ListaAsesoresComponent },
       { path: "login", component: LoginComponent },
 
       { path: "venta", component: ListarVentaComponent },

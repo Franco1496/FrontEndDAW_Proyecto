@@ -23,6 +23,7 @@ import { AddVentaComponent } from './venta/add-venta/add-venta.component';
 import { EditVentaComponent } from './venta/edit-venta/edit-venta.component';
 import { MenuIzquierdaComponent } from '../shared/menu-izquierda/menu-izquierda.component';
 import { ListarPropiedadComponent } from './propiedad/listar-propiedad/listar-propiedad.component';
+import { ListaAsesoresComponent } from './vistaCliente/lista-asesores/lista-asesores.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ListarPropiedadComponent } from './propiedad/listar-propiedad/listar-pr
 
     ListarVentaComponent,
     AddVentaComponent,
-    EditVentaComponent
+    EditVentaComponent,
+    ListaAsesoresComponent
 
   ],
   imports: [
