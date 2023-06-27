@@ -7,7 +7,8 @@
         <li *ngFor="let item of menuItems" class="list__item list__item--click">
           <div class="list__button list__button--click">
 
-            <a href="" class="nav__link">{{ item.titulo }}</a>
+            <a *ngIf="item.submenu != null" class="nav__link">{{ item.titulo }}</a>
+            <a *ngIf="item.submenu == null" routerLink="{{ item.url }}" class="nav__link">{{ item.titulo }}</a>
             <img *ngIf="item.submenu" src="assets/arrow.svg" class="list__arrow">
           </div>
 

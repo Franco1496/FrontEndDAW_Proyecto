@@ -8,17 +8,18 @@ export class SidebarService {
   menu: any[] = [
     {
       titulo: 'Inicio',
-      icon: 'mdi mdi-gauge'
+      icon: 'mdi mdi-gauge',
+      url: '/intranet/clientes'
     },
     {
       titulo: 'Mantenimientos',
       icon: 'mdi mdi-gauge',
       submenu: [
-        { titulo: 'Clientes', url: '/clientes' },
-        { titulo: 'Propiedades', url: '/propiedades' },
-        { titulo: 'Asesores', url: '/asesor' },
-        { titulo: 'Citas', url: '/cita' },
-        { titulo: 'Ventas', url: '/venta' },
+        { titulo: 'Clientes', url: '/intranet/clientes' },
+        { titulo: 'Propiedades', url: '/intranet/propiedades' },
+        { titulo: 'Asesores', url: '/intranet/asesor' },
+        { titulo: 'Citas', url: '/intranet/cita' },
+        { titulo: 'Ventas', url: '/intranet/venta' },
       ]
     },
     {
@@ -33,6 +34,7 @@ export class SidebarService {
     {
       titulo: 'Cerrar sesión',
       icon: 'mdi mdi-gauge',
+      url: ''
     }
 
   ];

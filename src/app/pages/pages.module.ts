@@ -23,31 +23,14 @@ import { AddVentaComponent } from './venta/add-venta/add-venta.component';
 import { EditVentaComponent } from './venta/edit-venta/edit-venta.component';
 import { MenuIzquierdaComponent } from '../shared/menu-izquierda/menu-izquierda.component';
 import { ListarPropiedadComponent } from './propiedad/listar-propiedad/listar-propiedad.component';
+import { IntranetComponent } from './intranet/intranet.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     HomeComponent,
 
-    ListarPropiedadComponent,
-    AddPropiedadComponent,
-    EditPropiedadComponent,
-
-    ListarClienteComponent,
-    AddClienteComponent,
-    EditClienteComponent,
-
-    ListarAsesorComponent,
-    AddAsesorComponent,
-    EditAsesorComponent,
-
-    ListarCitaComponent,
-    AddCitaComponent,
-    EditCitaComponent,
-
-    ListarVentaComponent,
-    AddVentaComponent,
-    EditVentaComponent
+    IntranetComponent
 
   ],
   imports: [
@@ -61,25 +44,8 @@ import { ListarPropiedadComponent } from './propiedad/listar-propiedad/listar-pr
     PagesComponent,
     HomeComponent,
 
-    ListarPropiedadComponent,
-    AddPropiedadComponent,
-    EditPropiedadComponent,
 
-    ListarClienteComponent,
-    AddClienteComponent,
-    EditClienteComponent,
-
-    ListarAsesorComponent,
-    AddAsesorComponent,
-    EditAsesorComponent,
-
-    ListarCitaComponent,
-    AddCitaComponent,
-    EditCitaComponent,
-
-    ListarVentaComponent,
-    AddVentaComponent,
-    EditVentaComponent
+    IntranetComponent
   ]
 
 })
