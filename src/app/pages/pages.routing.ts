@@ -4,7 +4,6 @@ import { HomeComponent } from "./home/home.component";
 import { PagesComponent } from "./pages.component";
 import { ListaPropiedadesComponent } from "./vistaCliente/lista-propiedades/lista-propiedades.component";
 import { ListarClienteComponent } from "./cliente/listar-cliente/listar-cliente.component";
-import { LoginComponent } from "./vistaCliente/login/login.component";
 import { AddClienteComponent } from "./cliente/add-cliente/add-cliente.component";
 import { EditClienteComponent } from "./cliente/edit-cliente/edit-cliente.component";
 import { ListarPropiedadComponent } from "./propiedad/listar-propiedad/listar-propiedad.component";
@@ -20,9 +19,9 @@ import { ListarCitaComponent } from "./cita/listar-cita/listar-cita.component";
 import { AddCitaComponent } from "./cita/add-cita/add-cita.component";
 import { EditCitaComponent } from "./cita/edit-cita/edit-cita.component";
 import { ListaAsesoresComponent } from "./vistaCliente/lista-asesores/lista-asesores.component";
+import { LoginComponent } from "../auth/login.component";
 import { ContactanosComponent } from "./vistaCliente/contactanos/contactanos.component";
 import { NosotrosComponent } from "./vistaCliente/nosotros/nosotros.component";
-
 
 
 const routes: Routes = [
