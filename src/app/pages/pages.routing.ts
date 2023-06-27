@@ -19,6 +19,10 @@ import { EditAsesorComponent } from "./asesor/edit-asesor/edit-asesor.component"
 import { ListarCitaComponent } from "./cita/listar-cita/listar-cita.component";
 import { AddCitaComponent } from "./cita/add-cita/add-cita.component";
 import { EditCitaComponent } from "./cita/edit-cita/edit-cita.component";
+import { ListaAsesoresComponent } from "./vistaCliente/lista-asesores/lista-asesores.component";
+import { ContactanosComponent } from "./vistaCliente/contactanos/contactanos.component";
+import { NosotrosComponent } from "./vistaCliente/nosotros/nosotros.component";
+
 
 
 const routes: Routes = [
@@ -39,6 +43,7 @@ const routes: Routes = [
       { path: "editarPropiedad", component: EditPropiedadComponent },
 
       { path: "listaPropiedades", component: ListaPropiedadesComponent },
+      { path: "listaAsesores", component: ListaAsesoresComponent },
       { path: "login", component: LoginComponent },
 
       { path: "venta", component: ListarVentaComponent },
@@ -52,6 +57,13 @@ const routes: Routes = [
       { path: "cita", component: ListarCitaComponent },
       { path: "nuevaCita", component: AddCitaComponent },
       { path: "editarCita", component: EditCitaComponent },
+
+
+      { path: "contactanos", component:ContactanosComponent },
+      { path: "nosotros", component:NosotrosComponent},
+
+      { path: "contactanos", component:ContactanosComponent }
+
 
 
     ]
