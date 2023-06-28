@@ -19,8 +19,9 @@ export class AddAsesorComponent implements OnInit {
 
   guardar(asesor:Asesor){
 
+    asesor.flag_estado = "true";
     this.asesorService.createAsesor(asesor).subscribe( data=>{
-      this.router.navigate(['asesores']);
+      this.router.navigate(['asesor']);
     })
   }
 

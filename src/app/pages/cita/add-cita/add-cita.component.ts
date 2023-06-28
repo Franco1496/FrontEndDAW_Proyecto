@@ -18,8 +18,9 @@ export class AddCitaComponent implements OnInit {
   }
 
   guardar(cita:Cita) {
+    cita.flag_estado = "true";
     this.citaService.createCita(cita).subscribe( data=>{
-      this.router.navigate(['citas']);
+      this.router.navigate(['cita']);
     })
   }
 

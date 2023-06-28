@@ -19,6 +19,7 @@ export class EditCitaComponent implements OnInit {
 
 
   editar(){
+    
     let id_cita = JSON.parse(localStorage.getItem('id_cita') as string);
     this.citaService.getCitaId(id_cita).subscribe(data=>{
       this.cita=data;
@@ -26,9 +27,10 @@ export class EditCitaComponent implements OnInit {
   }
 
   actualizar( cita:Cita){
+    cita.flag_estado = "true";
     this.citaService.updateCita(cita).subscribe(data=>{
       this.cita=data;
-      this.router.navigate(['citas']);
+      this.router.navigate(['cita']);
     })
   }
 

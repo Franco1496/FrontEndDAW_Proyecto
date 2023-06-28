@@ -25,7 +25,8 @@ export class SidebarService {
       titulo: 'Reportes',
       icon: 'mdi mdi-gauge',
       submenu: [
-        { titulo: 'Clientes', url: 'clientes' },
+
+        { titulo: 'Clientes', url: 'http://localhost:4200/api/reporte/cliente'  },
         { titulo: 'Citas', url: 'citas' },
         { titulo: 'Ventas', url: 'ventas' }
       ]
